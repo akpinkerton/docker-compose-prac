@@ -1,0 +1,940 @@
+Creating docker-try-again_db_1 ... done
+Creating docker-try-again_server_1 ... done
+Creating docker-try-again_fend_1   ... done
+Attaching to docker-try-again_db_1, docker-try-again_server_1, docker-try-again_fend_1
+server_1  |
+server_1  | > server@0.0.0 start
+server_1  | > nodemon ./bin/www
+server_1  |
+db_1      | The files belonging to this database system will be owned by user "postgres".
+db_1      | This user must also own the server process.
+db_1      |
+db_1      | The database cluster will be initialized with locale "en_US.utf8".
+db_1      | The default database encoding has accordingly been set to "UTF8".
+db_1      | The default text search configuration will be set to "english".
+db_1      |
+db_1      | Data page checksums are disabled.
+db_1      |
+db_1      | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+db_1      | creating subdirectories ... ok
+db_1      | selecting dynamic shared memory implementation ... posix
+db_1      | selecting default max_connections ... 100
+db_1      | selecting default shared_buffers ... 128MB
+server_1  | [nodemon] 2.0.12
+server_1  | [nodemon] to restart at any time, enter `rs`
+server_1  | [nodemon] watching path(s): *.*
+server_1  | [nodemon] watching extensions: js,mjs,json
+db_1      | selecting default time zone ... Etc/UTC
+db_1      | creating configuration files ... ok
+db_1      | running bootstrap script ... ok
+db_1      | performing post-bootstrap initialization ... ok
+db_1      | syncing data to disk ... ok
+db_1      |
+db_1      |
+db_1      | Success. You can now start the database server using:
+db_1      |
+db_1      |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+db_1      |
+db_1      | initdb: warning: enabling "trust" authentication for local connections
+db_1      | You can change this by editing pg_hba.conf or using the option -A, or
+db_1      | --auth-local and --auth-host, the next time you run initdb.
+db_1      | waiting for server to start....2021-07-14 17:59:00.227 UTC [35] LOG:  starting PostgreSQL 13.3 (Debian 13.3-1.pgdg100+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
+db_1      | 2021-07-14 17:59:00.228 UTC [35] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db_1      | 2021-07-14 17:59:00.232 UTC [36] LOG:  database system was shut down at 2021-07-14 17:59:00 UTC
+db_1      | 2021-07-14 17:59:00.236 UTC [35] LOG:  database system is ready to accept connections
+server_1  | [nodemon] starting `node ./bin/www`
+db_1      |  done
+db_1      | server started
+db_1      | CREATE DATABASE
+db_1      |
+db_1      |
+db_1      | /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+db_1      |
+db_1      | waiting for server to shut down...2021-07-14 17:59:00.453 UTC [35] LOG:  received fast shutdown request
+db_1      | .2021-07-14 17:59:00.454 UTC [35] LOG:  aborting any active transactions
+db_1      | 2021-07-14 17:59:00.455 UTC [35] LOG:  background worker "logical replication launcher" (PID 42) exited with exit code 1
+db_1      | 2021-07-14 17:59:00.456 UTC [37] LOG:  shutting down
+db_1      | 2021-07-14 17:59:00.466 UTC [35] LOG:  database system is shut down
+db_1      |  done
+db_1      | server stopped
+db_1      |
+db_1      | PostgreSQL init process complete; ready for start up.
+db_1      |
+db_1      | 2021-07-14 17:59:00.576 UTC [1] LOG:  starting PostgreSQL 13.3 (Debian 13.3-1.pgdg100+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
+db_1      | 2021-07-14 17:59:00.577 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db_1      | 2021-07-14 17:59:00.577 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db_1      | 2021-07-14 17:59:00.579 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db_1      | 2021-07-14 17:59:00.582 UTC [63] LOG:  database system was shut down at 2021-07-14 17:59:00 UTC
+db_1      | 2021-07-14 17:59:00.585 UTC [1] LOG:  database system is ready to accept connections
+fend_1    |
+fend_1    | > fend@0.1.0 start
+fend_1    | > react-scripts start
+fend_1    |
+fend_1    | ℹ ｢wds｣: Project is running at http://172.22.0.4/
+fend_1    | ℹ ｢wds｣: webpack output is served from
+fend_1    | ℹ ｢wds｣: Content not from webpack is served from /src/App/public
+fend_1    | ℹ ｢wds｣: 404s will fallback to /
+fend_1    | Starting the development server...
+fend_1    |
+fend_1    | Compiled successfully!
+fend_1    |
+fend_1    | You can now view fend in the browser.
+fend_1    |
+fend_1    |   Local:            http://localhost:3000
+fend_1    |   On Your Network:  http://172.22.0.4:3000
+fend_1    |
+fend_1    | Note that the development build is not optimized.
+fend_1    | To create a production build, use yarn build.
+fend_1    |
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping docker-try-again_fend_1   ... done
+Stopping docker-try-again_server_1 ... done
+Stopping docker-try-again_db_1     ... done
+
+~/supra-coders/11-Docker/docker-try-again  docker-compose down                ✔  2m 7s 
+Removing docker-try-again_fend_1   ... done
+Removing docker-try-again_server_1 ... done
+Removing docker-try-again_db_1     ... done
+Removing network docker-try-again_app-network
+
+~/supra-coders/11-Docker/docker-try-again  docker-compose up                     ✔  3s 
+Creating network "docker-try-again_app-network" with driver "bridge"
+Creating db ... done
+Creating server ... done
+Creating fend   ... done
+Attaching to db, server, fend
+db        |
+db        | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db        |
+db        | 2021-07-14 18:01:14.507 UTC [1] LOG:  starting PostgreSQL 13.3 (Debian 13.3-1.pgdg100+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
+db        | 2021-07-14 18:01:14.507 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db        | 2021-07-14 18:01:14.507 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db        | 2021-07-14 18:01:14.510 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db        | 2021-07-14 18:01:14.514 UTC [15] LOG:  database system was shut down at 2021-07-14 17:58:41 UTC
+db        | 2021-07-14 18:01:14.522 UTC [1] LOG:  database system is ready to accept connections
+server    |
+server    | > server@0.0.0 start
+server    | > nodemon ./bin/www
+server    |
+server    | [nodemon] 2.0.12
+server    | [nodemon] to restart at any time, enter `rs`
+server    | [nodemon] watching path(s): *.*
+server    | [nodemon] watching extensions: js,mjs,json
+server    | [nodemon] starting `node ./bin/www`
+fend      |
+fend      | > fend@0.1.0 start
+fend      | > react-scripts start
+fend      |
+fend      | ℹ ｢wds｣: Project is running at http://172.23.0.4/
+fend      | ℹ ｢wds｣: webpack output is served from
+fend      | ℹ ｢wds｣: Content not from webpack is served from /src/App/public
+fend      | ℹ ｢wds｣: 404s will fallback to /
+fend      | Starting the development server...
+fend      |
+fend      | Compiled successfully!
+fend      |
+fend      | You can now view fend in the browser.
+fend      |
+fend      |   Local:            http://localhost:3000
+fend      |   On Your Network:  http://172.23.0.4:3000
+fend      |
+fend      | Note that the development build is not optimized.
+fend      | To create a production build, use yarn build.
+fend      |
+server    | GET submitted
+server    | GET / 404 26.546 ms - 81
+server    | GET submitted
+server    | GET / 404 10.663 ms - 81
+server    | OPTIONS / 200 1.468 ms - 13
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping fend   ... done
+Stopping server ... done
+Stopping db     ... done
+
+~/supra-coders/11-Docker/docker-try-again  docker-compose down               ✔  2m 13s 
+Removing fend   ... done
+Removing server ... done
+Removing db     ... done
+Removing network docker-try-again_app-network
+
+~/supra-coders/11-Docker/docker-try-again  docker-compose up                     ✔  4s 
+Creating network "docker-try-again_app-network" with driver "bridge"
+Creating db ... done
+Creating server ... done
+Creating fend   ... done
+Attaching to db, server, fend
+db        |
+db        | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db        |
+db        | 2021-07-14 18:03:39.680 UTC [1] LOG:  starting PostgreSQL 13.3 (Debian 13.3-1.pgdg100+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
+db        | 2021-07-14 18:03:39.681 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db        | 2021-07-14 18:03:39.681 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db        | 2021-07-14 18:03:39.688 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db        | 2021-07-14 18:03:39.691 UTC [13] LOG:  database system was shut down at 2021-07-14 18:03:17 UTC
+db        | 2021-07-14 18:03:39.700 UTC [1] LOG:  database system is ready to accept connections
+server    |
+server    | > server@0.0.0 start
+server    | > nodemon ./bin/www
+server    |
+server    | [nodemon] 2.0.12
+server    | [nodemon] to restart at any time, enter `rs`
+server    | [nodemon] watching path(s): *.*
+server    | [nodemon] watching extensions: js,mjs,json
+server    | [nodemon] starting `node ./bin/www`
+fend      |
+fend      | > fend@0.1.0 start
+fend      | > react-scripts start
+fend      |
+fend      | ℹ ｢wds｣: Project is running at http://172.24.0.4/
+fend      | ℹ ｢wds｣: webpack output is served from
+fend      | ℹ ｢wds｣: Content not from webpack is served from /src/App/public
+fend      | ℹ ｢wds｣: 404s will fallback to /
+fend      | Starting the development server...
+fend      |
+fend      | Compiled successfully!
+fend      |
+fend      | You can now view fend in the browser.
+fend      |
+fend      |   Local:            http://localhost:3000
+fend      |   On Your Network:  http://172.24.0.4:3000
+fend      |
+fend      | Note that the development build is not optimized.
+fend      | To create a production build, use yarn build.
+fend      |
+server    | OPTIONS / 200 5.218 ms - 13
+server    | GET submitted
+server    | GET / 404 24.588 ms - 81
+^[[A^[[A^CGracefully stopping... (press Ctrl+C again to force)
+Stopping fend   ... done
+Stopping server ... done
+Stopping db     ... done
+
+~/supra-coders/11-Docker/docker-try-again  docker-compose down               ✔  1m 15s 
+Removing fend   ... done
+Removing server ... done
+Removing db     ... done
+Removing network docker-try-again_app-network
+
+~/supra-coders/11-Docker/docker-try-again  docker-compose up                     ✔  4s 
+Creating network "docker-try-again_app-network" with driver "bridge"
+Creating db ... done
+Creating server ... done
+Creating fend   ... done
+Attaching to db, server, fend
+db        |
+db        | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db        |
+db        | 2021-07-14 18:05:21.058 UTC [1] LOG:  starting PostgreSQL 13.3 (Debian 13.3-1.pgdg100+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
+db        | 2021-07-14 18:05:21.058 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db        | 2021-07-14 18:05:21.058 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db        | 2021-07-14 18:05:21.078 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db        | 2021-07-14 18:05:21.083 UTC [13] LOG:  database system was shut down at 2021-07-14 18:04:45 UTC
+db        | 2021-07-14 18:05:21.095 UTC [1] LOG:  database system is ready to accept connections
+server    |
+server    | > server@0.0.0 start
+server    | > nodemon ./bin/www
+server    |
+server    | [nodemon] 2.0.12
+server    | [nodemon] to restart at any time, enter `rs`
+server    | [nodemon] watching path(s): *.*
+server    | [nodemon] watching extensions: js,mjs,json
+server    | [nodemon] starting `node ./bin/www`
+fend      |
+fend      | > fend@0.1.0 start
+fend      | > react-scripts start
+fend      |
+fend      | ℹ ｢wds｣: Project is running at http://172.25.0.4/
+fend      | ℹ ｢wds｣: webpack output is served from
+fend      | ℹ ｢wds｣: Content not from webpack is served from /src/App/public
+fend      | ℹ ｢wds｣: 404s will fallback to /
+fend      | Starting the development server...
+fend      |
+fend      | Compiled successfully!
+fend      |
+fend      | You can now view fend in the browser.
+fend      |
+fend      |   Local:            http://localhost:3000
+fend      |   On Your Network:  http://172.25.0.4:3000
+fend      |
+fend      | Note that the development build is not optimized.
+fend      | To create a production build, use yarn build.
+fend      |
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping fend   ... done
+Stopping server ... done
+Stopping db     ... done
+
+~/s/11-Docker/docker-try-again    main +16 !2  docker-compose down               ✔  4m 27s 
+Removing fend   ... done
+Removing server ... done
+Removing db     ... done
+Removing network docker-try-again_app-network
+^[[A%
+
+~/s/11-Docker/docker-try-again    main +16 !2  docker-compose up                               ✔  4s 
+Creating network "docker-try-again_app-network" with driver "bridge"
+Creating db ... done
+Creating server ... done
+Creating fend   ... done
+Attaching to db, server, fend
+db        |
+db        | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db        |
+db        | 2021-07-14 18:09:57.881 UTC [1] LOG:  starting PostgreSQL 13.3 (Debian 13.3-1.pgdg100+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
+db        | 2021-07-14 18:09:57.881 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db        | 2021-07-14 18:09:57.881 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db        | 2021-07-14 18:09:57.883 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db        | 2021-07-14 18:09:57.886 UTC [14] LOG:  database system was shut down at 2021-07-14 18:09:38 UTC
+db        | 2021-07-14 18:09:57.898 UTC [1] LOG:  database system is ready to accept connections
+server    |
+server    | > server@0.0.0 start
+server    | > nodemon ./bin/www
+server    |
+server    | [nodemon] 2.0.12
+server    | [nodemon] to restart at any time, enter `rs`
+server    | [nodemon] watching path(s): *.*
+server    | [nodemon] watching extensions: js,mjs,json
+server    | [nodemon] starting `node ./bin/www`
+fend      |
+fend      | > fend@0.1.0 start
+fend      | > react-scripts start
+fend      |
+fend      | ℹ ｢wds｣: Project is running at http://172.26.0.4/
+fend      | ℹ ｢wds｣: webpack output is served from
+fend      | ℹ ｢wds｣: Content not from webpack is served from /src/App/public
+fend      | ℹ ｢wds｣: 404s will fallback to /
+fend      | Starting the development server...
+fend      |
+fend      | Compiled successfully!
+fend      |
+fend      | You can now view fend in the browser.
+fend      |
+fend      |   Local:            http://localhost:3000
+fend      |   On Your Network:  http://172.26.0.4:3000
+fend      |
+fend      | Note that the development build is not optimized.
+fend      | To create a production build, use yarn build.
+fend      |
+server    | OPTIONS / 200 2.413 ms - 13
+server    | GET submitted
+server    | GET / 404 42.782 ms - 81
+server    | OPTIONS / 200 2.115 ms - 13
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping fend   ... done
+Stopping server ... done
+Stopping db     ... done
+
+~/s/11-Docker/docker-try-again    main +16 !2  docker-compose down               ✔  1m 17s 
+Removing fend   ... done
+Removing server ... done
+Removing db     ... done
+Removing network docker-try-again_app-network
+
+~/s/11-Docker/docker-try-again    main +16 !2  docker-compose up                     ✔  4s 
+Creating network "docker-try-again_app-network" with driver "bridge"
+Creating db ... done
+Creating server ... done
+Creating fend   ... done
+Attaching to db, server, fend
+db        |
+db        | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db        |
+server    |
+server    | > server@0.0.0 start
+server    | > nodemon ./bin/www
+server    |
+db        | 2021-07-14 18:11:28.063 UTC [1] LOG:  starting PostgreSQL 13.3 (Debian 13.3-1.pgdg100+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
+db        | 2021-07-14 18:11:28.063 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db        | 2021-07-14 18:11:28.063 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+server    | [nodemon] 2.0.12
+db        | 2021-07-14 18:11:28.069 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db        | 2021-07-14 18:11:28.089 UTC [14] LOG:  database system was shut down at 2021-07-14 18:11:05 UTC
+db        | 2021-07-14 18:11:28.105 UTC [1] LOG:  database system is ready to accept connections
+server    | [nodemon] to restart at any time, enter `rs`
+server    | [nodemon] watching path(s): *.*
+server    | [nodemon] watching extensions: js,mjs,json
+server    | [nodemon] starting `node ./bin/www`
+fend      |
+fend      | > fend@0.1.0 start
+fend      | > react-scripts start
+fend      |
+fend      | ℹ ｢wds｣: Project is running at http://172.27.0.4/
+fend      | ℹ ｢wds｣: webpack output is served from
+fend      | ℹ ｢wds｣: Content not from webpack is served from /src/App/public
+fend      | ℹ ｢wds｣: 404s will fallback to /
+fend      | Starting the development server...
+fend      |
+fend      | Compiled successfully!
+fend      |
+fend      | You can now view fend in the browser.
+fend      |
+fend      |   Local:            http://localhost:3000
+fend      |   On Your Network:  http://172.27.0.4:3000
+fend      |
+fend      | Note that the development build is not optimized.
+fend      | To create a production build, use yarn build.
+fend      |
+server    | GET submitted
+server    | GET / 404 34.172 ms - 81
+server    | GET submitted
+server    | GET / 404 19.359 ms - 81
+server    | OPTIONS / 200 2.422 ms - 13
+server    | OPTIONS / 200 5.341 ms - 13
+server    | GET submitted
+server    | GET / 404 13.676 ms - 81
+server    | npm notice
+server    | npm notice New minor version of npm available! 7.18.1 -> 7.19.1
+server    | npm notice Changelog: <https://github.com/npm/cli/releases/tag/v7.19.1>
+server    | npm notice Run `npm install -g npm@7.19.1` to update!
+server    | npm notice
+server    | npm ERR! path /src/server
+server    | npm ERR! command failed
+server    | npm ERR! signal SIGTERM
+server    | npm ERR! command sh -c nodemon ./bin/www
+server    |
+server    | npm ERR! A complete log of this run can be found in:
+server    | npm ERR!     /root/.npm/_logs/2021-07-14T18_20_53_968Z-debug.log
+server exited with code 1
+server    |
+server    | > server@0.0.0 start
+server    | > nodemon ./bin/www
+server    |
+server    | [nodemon] 2.0.12
+server    | [nodemon] to restart at any time, enter `rs`
+server    | [nodemon] watching path(s): *.*
+server    | [nodemon] watching extensions: js,mjs,json
+server    | [nodemon] starting `node ./bin/www`
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping fend   ... done
+Stopping server ... done
+Stopping db     ... done
+
+~/supra-coders/11-Docker/docker-try-again    main +16 !3  docker-compose down                                ✔  11m 25s 
+Removing fend   ... done
+Removing server ... done
+Removing db     ... done
+Removing network docker-try-again_app-network
+
+~/supra-coders/11-Docker/docker-try-again    main +16 !3  docker-compose up                                                                               ✔  4s 
+Creating network "docker-try-again_app-network" with driver "bridge"
+Creating db ... done
+Creating server ... done
+Creating fend   ... done
+Attaching to db, server, fend
+db        |
+db        | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db        |
+db        | 2021-07-14 18:23:17.418 UTC [1] LOG:  starting PostgreSQL 13.3 (Debian 13.3-1.pgdg100+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
+db        | 2021-07-14 18:23:17.419 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db        | 2021-07-14 18:23:17.419 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db        | 2021-07-14 18:23:17.422 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db        | 2021-07-14 18:23:17.427 UTC [13] LOG:  database system was shut down at 2021-07-14 18:22:42 UTC
+db        | 2021-07-14 18:23:17.433 UTC [1] LOG:  database system is ready to accept connections
+server    |
+server    | > server@0.0.0 start
+server    | > nodemon ./bin/www
+server    |
+server    | [nodemon] 2.0.12
+server    | [nodemon] to restart at any time, enter `rs`
+server    | [nodemon] watching path(s): *.*
+server    | [nodemon] watching extensions: js,mjs,json
+server    | [nodemon] starting `node ./bin/www`
+fend      |
+fend      | > fend@0.1.0 start
+fend      | > react-scripts start
+fend      |
+fend      | ℹ ｢wds｣: Project is running at http://172.28.0.4/
+fend      | ℹ ｢wds｣: webpack output is served from
+fend      | ℹ ｢wds｣: Content not from webpack is served from /src/App/public
+fend      | ℹ ｢wds｣: 404s will fallback to /
+fend      | Starting the development server...
+fend      |
+fend      | Compiled successfully!
+fend      |
+fend      | You can now view fend in the browser.
+fend      |
+fend      |   Local:            http://localhost:3000
+fend      |   On Your Network:  http://172.28.0.4:3000
+fend      |
+fend      | Note that the development build is not optimized.
+fend      | To create a production build, use yarn build.
+fend      |
+server    | GET submitted
+server    | GET / 404 46.796 ms - 81
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping fend   ... done
+Stopping server ... done
+Stopping db     ... done
+
+~/supra-coders/11-Docker/docker-try-again    main +15 !3 ?1  docker-compose down                                    ✔  56s 
+Removing fend   ... done
+Removing server ... done
+Removing db     ... done
+Removing network docker-try-again_app-network
+
+~/supra-coders/11-Docker/docker-try-again    main +15 !3 ?1  docker-compose up --build                                     ✔  4s 
+Creating network "docker-try-again_app-network" with driver "bridge"
+Building server
+[+] Building 8.6s (10/10) FINISHED
+ => [internal] load build definition from Dockerfile                                                                                                                       0.0s
+ => => transferring dockerfile: 606B                                                                                                                                       0.0s
+ => [internal] load .dockerignore                                                                                                                                          0.0s
+ => => transferring context: 52B                                                                                                                                           0.0s
+ => [internal] load metadata for docker.io/library/node:latest                                                                                                             0.0s
+ => [1/5] FROM docker.io/library/node:latest                                                                                                                               0.0s
+ => [internal] load build context                                                                                                                                          0.2s
+ => => transferring context: 70.86kB                                                                                                                                       0.2s
+ => CACHED [2/5] RUN mkdir -p /src/app                                                                                                                                     0.0s
+ => CACHED [3/5] WORKDIR /src/app                                                                                                                                          0.0s
+ => [4/5] COPY . /src/app                                                                                                                                                  0.0s
+ => [5/5] RUN yarn install                                                                                                                                                 7.0s
+ => exporting to image                                                                                                                                                     1.0s
+ => => exporting layers                                                                                                                                                    1.0s
+ => => writing image sha256:a8e96c3d152a1833d15b2cc514887c7b89531e73ccd3a45f2713b0f922c839e6                                                                               0.0s
+ => => naming to docker.io/library/docker-try-again_server                                                                                                                 0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+Building fend
+[+] Building 63.1s (10/10) FINISHED
+ => [internal] load build definition from Dockerfile                                                                                                                       0.0s
+ => => transferring dockerfile: 579B                                                                                                                                       0.0s
+ => [internal] load .dockerignore                                                                                                                                          0.0s
+ => => transferring context: 52B                                                                                                                                           0.0s
+ => [internal] load metadata for docker.io/library/node:latest                                                                                                             0.0s
+ => [1/5] FROM docker.io/library/node:latest                                                                                                                               0.0s
+ => [internal] load build context                                                                                                                                          1.4s
+ => => transferring context: 5.71kB                                                                                                                                        1.4s
+ => CACHED [2/5] RUN mkdir -p /src/app                                                                                                                                     0.0s
+ => CACHED [3/5] WORKDIR /src/app                                                                                                                                          0.0s
+ => [4/5] COPY . /src/app                                                                                                                                                  0.1s
+ => [5/5] RUN yarn install                                                                                                                                                51.7s
+ => exporting to image                                                                                                                                                     9.7s
+ => => exporting layers                                                                                                                                                    9.7s
+ => => writing image sha256:18f74e1130d0979846c665e56900c03181c17859799acdac7e308be83e4c92f7                                                                               0.0s
+ => => naming to docker.io/library/docker-try-again_fend                                                                                                                   0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+Creating db ... done
+Creating server ... done
+Creating fend   ... done
+Attaching to db, server, fend
+db        |
+db        | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db        |
+db        | 2021-07-14 18:25:45.945 UTC [1] LOG:  starting PostgreSQL 13.3 (Debian 13.3-1.pgdg100+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
+db        | 2021-07-14 18:25:45.946 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db        | 2021-07-14 18:25:45.946 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db        | 2021-07-14 18:25:45.949 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db        | 2021-07-14 18:25:45.953 UTC [15] LOG:  database system was shut down at 2021-07-14 18:24:04 UTC
+db        | 2021-07-14 18:25:45.963 UTC [1] LOG:  database system is ready to accept connections
+server    |
+server    | > server@0.0.0 start
+server    | > npm run start-knex && nodemon ./bin/www
+server    |
+server    |
+server    | > server@0.0.0 start-knex
+server    | > npx knex migrate:latest && npx knex seed:run
+server    |
+server    | Using environment: development
+server    | Already up to date
+server    | Using environment: development
+server    | Ran 1 seed files
+server    | npm notice
+server    | npm notice New minor version of npm available! 7.18.1 -> 7.19.1
+server    | npm notice Changelog: <https://github.com/npm/cli/releases/tag/v7.19.1>
+server    | npm notice Run `npm install -g npm@7.19.1` to update!
+server    | npm notice
+server    | [nodemon] 2.0.12
+server    | [nodemon] to restart at any time, enter `rs`
+server    | [nodemon] watching path(s): *.*
+server    | [nodemon] watching extensions: js,mjs,json
+server    | [nodemon] starting `node ./bin/www`
+fend      |
+fend      | > fend@0.1.0 start
+fend      | > react-scripts start
+fend      |
+fend      | ℹ ｢wds｣: Project is running at http://172.29.0.4/
+fend      | ℹ ｢wds｣: webpack output is served from
+fend      | ℹ ｢wds｣: Content not from webpack is served from /src/app/public
+fend      | ℹ ｢wds｣: 404s will fallback to /
+fend      | Starting the development server...
+fend      |
+fend      | Compiled with warnings.
+fend      |
+fend      | src/App.js
+fend      |   Line 33:6:  React Hook useEffect has a missing dependency: 'postInputs'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+fend      |
+fend      | Search for the keywords to learn more about each warning.
+fend      | To ignore, add // eslint-disable-next-line to the line before.
+fend      |
+server    | GET submitted
+server    | GET / 200 104.174 ms - 70
+server    | GET submitted
+server    | GET / 200 11.356 ms - 70
+server    | OPTIONS / 204 5.619 ms - 0
+server    | POST body:  {}
+db        | 2021-07-14 18:26:40.040 UTC [60] ERROR:  null value in column "title" of relation "inputs" violates not-null constraint
+db        | 2021-07-14 18:26:40.040 UTC [60] DETAIL:  Failing row contains (3, null, 2021-07-14 18:26:40.029847+00).
+db        | 2021-07-14 18:26:40.040 UTC [60] STATEMENT:  insert into "inputs" ("title") values (DEFAULT)
+server    | POST / 404 96.076 ms - 81
+server    | POST body:  { title: 'zcZXc' }
+server    | POST / 200 36.143 ms - 1013
+server    | GET submitted
+server    | GET / 200 15.472 ms - 132
+server    | OPTIONS / 204 1.504 ms - 0
+server    | POST / 400 10.621 ms - 967
+server    | SyntaxError: Unexpected token M in JSON at position 0
+server    |     at JSON.parse (<anonymous>)
+server    |     at createStrictSyntaxError (/src/app/node_modules/body-parser/lib/types/json.js:158:10)
+server    |     at parse (/src/app/node_modules/body-parser/lib/types/json.js:83:15)
+server    |     at /src/app/node_modules/body-parser/lib/read.js:121:18
+server    |     at invokeCallback (/src/app/node_modules/raw-body/index.js:224:16)
+server    |     at done (/src/app/node_modules/raw-body/index.js:213:7)
+server    |     at IncomingMessage.onEnd (/src/app/node_modules/raw-body/index.js:273:7)
+server    |     at IncomingMessage.emit (node:events:406:35)
+server    |     at endReadableNT (node:internal/streams/readable:1329:12)
+server    |     at processTicksAndRejections (node:internal/process/task_queues:83:21)
+server    | GET submitted
+server    | GET / 200 12.889 ms - 132
+server    | GET submitted
+server    | GET / 304 23.796 ms - -
+server    | GET submitted
+server    | GET / 304 23.646 ms - -
+server    | OPTIONS / 204 1.447 ms - 0
+server    | POST / 400 4.799 ms - 967
+server    | SyntaxError: Unexpected token W in JSON at position 0
+server    |     at JSON.parse (<anonymous>)
+server    |     at createStrictSyntaxError (/src/app/node_modules/body-parser/lib/types/json.js:158:10)
+server    |     at parse (/src/app/node_modules/body-parser/lib/types/json.js:83:15)
+server    |     at /src/app/node_modules/body-parser/lib/read.js:121:18
+server    |     at invokeCallback (/src/app/node_modules/raw-body/index.js:224:16)
+server    |     at done (/src/app/node_modules/raw-body/index.js:213:7)
+server    |     at IncomingMessage.onEnd (/src/app/node_modules/raw-body/index.js:273:7)
+server    |     at IncomingMessage.emit (node:events:406:35)
+server    |     at endReadableNT (node:internal/streams/readable:1329:12)
+server    |     at processTicksAndRejections (node:internal/process/task_queues:83:21)
+server    | GET submitted
+server    | GET / 304 28.767 ms - -
+server    | GET submitted
+server    | GET / 304 7.497 ms - -
+server    | GET submitted
+server    | GET / 304 27.354 ms - -
+server    | GET submitted
+server    | GET / 304 5.955 ms - -
+server    | GET submitted
+server    | GET / 304 24.670 ms - -
+server    | GET submitted
+server    | GET / 304 27.578 ms - -
+server    | OPTIONS / 204 1.360 ms - 0
+server    | POST body:  { title: 'new' }
+server    | POST / 200 20.532 ms - 1013
+server    | GET submitted
+server    | GET / 200 15.104 ms - 192
+server    | GET submitted
+server    | GET / 200 23.974 ms - 192
+server    | GET submitted
+server    | GET / 304 7.817 ms - -
+server    | OPTIONS / 204 1.151 ms - 0
+server    | POST body:  {}
+db        | 2021-07-14 18:30:18.535 UTC [60] ERROR:  null value in column "title" of relation "inputs" violates not-null constraint
+db        | 2021-07-14 18:30:18.535 UTC [60] DETAIL:  Failing row contains (6, null, 2021-07-14 18:30:18.527401+00).
+db        | 2021-07-14 18:30:18.535 UTC [60] STATEMENT:  insert into "inputs" ("title") values (DEFAULT)
+server    | POST / 404 31.420 ms - 81
+server    | OPTIONS / 204 0.957 ms - 0
+server    | POST body:  { title: 'Matt was here' }
+server    | POST / 200 20.460 ms - 1013
+server    | GET submitted
+server    | GET / 200 5.995 ms - 262
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping fend   ... done
+Stopping server ... done
+Stopping db     ... done
+
+~/supra-coders/11-Docker/docker-try-again    main  docker-compose down                                                                           ✔  37m 59s 
+ERROR: build path /Users/annapinkerton/supra-coders/11-Docker/docker-try-again/fend either does not exist, is not accessible, or is not a valid URL.
+
+~/supra-coders/11-Docker/docker-try-again    main  docker-compose down                                                                               1 ✘
+Removing fend   ... done
+Removing server ... done
+Removing db     ... done
+Removing network docker-try-again_app-network
+
+~/supra-coders/11-Docker/docker-try-again    main !1  docker-compose up --build                                                                                  ✔  4s 
+Creating network "docker-try-again_app-network" with driver "bridge"
+Building server
+[+] Building 0.3s (10/10) FINISHED
+ => [internal] load build definition from Dockerfile                                                                                                                                                            0.0s
+ => => transferring dockerfile: 37B                                                                                                                                                                             0.0s
+ => [internal] load .dockerignore                                                                                                                                                                               0.0s
+ => => transferring context: 34B                                                                                                                                                                                0.0s
+ => [internal] load metadata for docker.io/library/node:latest                                                                                                                                                  0.0s
+ => [internal] load build context                                                                                                                                                                               0.0s
+ => => transferring context: 615B                                                                                                                                                                               0.0s
+ => [1/5] FROM docker.io/library/node:latest                                                                                                                                                                    0.0s
+ => CACHED [2/5] RUN mkdir -p /src/app                                                                                                                                                                          0.0s
+ => CACHED [3/5] WORKDIR /src/app                                                                                                                                                                               0.0s
+ => CACHED [4/5] COPY . /src/app                                                                                                                                                                                0.0s
+ => CACHED [5/5] RUN yarn install                                                                                                                                                                               0.0s
+ => exporting to image                                                                                                                                                                                          0.0s
+ => => exporting layers                                                                                                                                                                                         0.0s
+ => => writing image sha256:a8e96c3d152a1833d15b2cc514887c7b89531e73ccd3a45f2713b0f922c839e6                                                                                                                    0.0s
+ => => naming to docker.io/library/docker-try-again_server                                                                                                                                                      0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+Building fend
+[+] Building 69.7s (10/10) FINISHED
+ => [internal] load build definition from Dockerfile                                                                                                                                                            0.0s
+ => => transferring dockerfile: 579B                                                                                                                                                                            0.0s
+ => [internal] load .dockerignore                                                                                                                                                                               0.0s
+ => => transferring context: 52B                                                                                                                                                                                0.0s
+ => [internal] load metadata for docker.io/library/node:latest                                                                                                                                                  0.0s
+ => [1/5] FROM docker.io/library/node:latest                                                                                                                                                                    0.0s
+ => [internal] load build context                                                                                                                                                                               0.1s
+ => => transferring context: 691.02kB                                                                                                                                                                           0.1s
+ => CACHED [2/5] RUN mkdir -p /src/app                                                                                                                                                                          0.0s
+ => CACHED [3/5] WORKDIR /src/app                                                                                                                                                                               0.0s
+ => [4/5] COPY . /src/app                                                                                                                                                                                       0.0s
+ => [5/5] RUN yarn install                                                                                                                                                                                     59.4s
+ => exporting to image                                                                                                                                                                                          9.9s
+ => => exporting layers                                                                                                                                                                                         9.9s
+ => => writing image sha256:edd34a682d73dbf0071bb1c6e4ba43442f06b1812fb32c886453bfcc885d4aa1                                                                                                                    0.0s
+ => => naming to docker.io/library/docker-try-again_fend                                                                                                                                                        0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+Creating docker-try-again_db_1 ... done
+Creating docker-try-again_server_1 ... done
+Creating docker-try-again_fend_1   ... done
+Attaching to docker-try-again_db_1, docker-try-again_server_1, docker-try-again_fend_1
+db_1      |
+db_1      | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db_1      |
+server_1  |
+server_1  | > server@0.0.0 start
+server_1  | > npm run start-knex && nodemon ./bin/www
+server_1  |
+server_1  |
+server_1  | > server@0.0.0 start-knex
+server_1  | > npx knex migrate:latest && npx knex seed:run
+server_1  |
+db_1      | 2021-07-14 19:04:39.281 UTC [1] LOG:  starting PostgreSQL 13.3 (Debian 13.3-1.pgdg100+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
+db_1      | 2021-07-14 19:04:39.281 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db_1      | 2021-07-14 19:04:39.282 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db_1      | 2021-07-14 19:04:39.283 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+server_1  | Using environment: development
+db_1      | 2021-07-14 19:04:39.288 UTC [14] LOG:  database system was shut down at 2021-07-14 19:02:19 UTC
+db_1      | 2021-07-14 19:04:39.297 UTC [1] LOG:  database system is ready to accept connections
+server_1  | Already up to date
+server_1  | npm notice
+server_1  | npm notice New minor version of npm available! 7.18.1 -> 7.19.1
+server_1  | npm notice Changelog: <https://github.com/npm/cli/releases/tag/v7.19.1>
+server_1  | npm notice Run `npm install -g npm@7.19.1` to update!
+server_1  | npm notice
+server_1  | Using environment: development
+server_1  | Ran 1 seed files
+server_1  | npm notice
+server_1  | npm notice New minor version of npm available! 7.18.1 -> 7.19.1
+server_1  | npm notice Changelog: <https://github.com/npm/cli/releases/tag/v7.19.1>
+server_1  | npm notice Run `npm install -g npm@7.19.1` to update!
+server_1  | npm notice
+server_1  | [nodemon] 2.0.12
+server_1  | [nodemon] to restart at any time, enter `rs`
+server_1  | [nodemon] watching path(s): *.*
+server_1  | [nodemon] watching extensions: js,mjs,json
+server_1  | [nodemon] starting `node ./bin/www`
+fend_1    |
+fend_1    | > fend@0.1.0 start
+fend_1    | > react-scripts start
+fend_1    |
+fend_1    | ℹ ｢wds｣: Project is running at http://172.30.0.4/
+fend_1    | ℹ ｢wds｣: webpack output is served from
+fend_1    | ℹ ｢wds｣: Content not from webpack is served from /src/app/public
+fend_1    | ℹ ｢wds｣: 404s will fallback to /
+fend_1    | Starting the development server...
+fend_1    |
+fend_1    | Compiled with warnings.
+fend_1    |
+fend_1    | src/App.js
+fend_1    |   Line 33:6:  React Hook useEffect has a missing dependency: 'postInputs'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+fend_1    |
+fend_1    | Search for the keywords to learn more about each warning.
+fend_1    | To ignore, add // eslint-disable-next-line to the line before.
+fend_1    |
+server_1  | GET submitted
+server_1  | GET / 200 72.811 ms - 70
+server_1  | OPTIONS / 204 2.523 ms - 0
+server_1  | POST body:  {}
+db_1      | 2021-07-14 19:05:20.394 UTC [51] ERROR:  null value in column "title" of relation "inputs" violates not-null constraint
+db_1      | 2021-07-14 19:05:20.394 UTC [51] DETAIL:  Failing row contains (9, null, 2021-07-14 19:05:20.38097+00).
+db_1      | 2021-07-14 19:05:20.394 UTC [51] STATEMENT:  insert into "inputs" ("title") values (DEFAULT)
+server_1  | POST / 404 158.950 ms - 81
+server_1  | POST body:  { title: 'bnm' }
+server_1  | POST / 200 37.426 ms - 1013
+server_1  | GET submitted
+server_1  | GET / 200 7.749 ms - 131
+server_1  | GET submitted
+server_1  | GET / 200 26.449 ms - 131
+server_1  | GET submitted
+server_1  | GET / 304 26.680 ms - -
+server_1  | OPTIONS / 204 6.943 ms - 0
+server_1  | POST body:  { title: 'anna' }
+server_1  | POST / 200 31.683 ms - 1013
+server_1  | GET submitted
+server_1  | GET / 200 29.453 ms - 193
+server_1  | OPTIONS / 204 0.909 ms - 0
+server_1  | POST body:  {}
+db_1      | 2021-07-14 19:07:49.758 UTC [51] ERROR:  null value in column "title" of relation "inputs" violates not-null constraint
+db_1      | 2021-07-14 19:07:49.758 UTC [51] DETAIL:  Failing row contains (12, null, 2021-07-14 19:07:49.754999+00).
+db_1      | 2021-07-14 19:07:49.758 UTC [51] STATEMENT:  insert into "inputs" ("title") values (DEFAULT)
+server_1  | POST / 404 14.643 ms - 81
+server_1  | POST body:  { title: 'anna again' }
+server_1  | POST / 200 30.055 ms - 1013
+server_1  | GET submitted
+server_1  | GET / 200 26.315 ms - 261
+server_1  | OPTIONS / 204 2.037 ms - 0
+server_1  | POST body:  {}
+db_1      | 2021-07-14 19:41:14.383 UTC [51] ERROR:  null value in column "title" of relation "inputs" violates not-null constraint
+db_1      | 2021-07-14 19:41:14.383 UTC [51] DETAIL:  Failing row contains (14, null, 2021-07-14 19:41:14.364726+00).
+db_1      | 2021-07-14 19:41:14.383 UTC [51] STATEMENT:  insert into "inputs" ("title") values (DEFAULT)
+server_1  | POST / 404 62.545 ms - 81
+server_1  | OPTIONS / 204 1.048 ms - 0
+server_1  | POST body:  {}
+db_1      | 2021-07-14 19:41:48.393 UTC [51] ERROR:  null value in column "title" of relation "inputs" violates not-null constraint
+db_1      | 2021-07-14 19:41:48.393 UTC [51] DETAIL:  Failing row contains (15, null, 2021-07-14 19:41:48.387529+00).
+db_1      | 2021-07-14 19:41:48.393 UTC [51] STATEMENT:  insert into "inputs" ("title") values (DEFAULT)
+server_1  | POST / 404 16.766 ms - 81
+server_1  | GET submitted
+server_1  | GET / 304 23.343 ms - -
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping docker-try-again_fend_1   ... done
+Stopping docker-try-again_server_1 ... done
+Stopping docker-try-again_db_1     ... done
+
+~/s/11/docker-try-again >>>>docker-compose down                                               ✔  39m 21s 
+Removing docker-try-again_fend_1   ... done
+Removing docker-try-again_server_1 ... done
+Removing docker-try-again_db_1     ... done
+Removing network docker-try-again_app-network
+
+~/s/11/docker-try-again >>>>docker-compose up --build                                              ✔  4s 
+Creating network "docker-try-again_app-network" with driver "bridge"
+Building server
+[+] Building 0.3s (10/10) FINISHED
+ => [internal] load build definition from Dockerfile                                                                        0.0s
+ => => transferring dockerfile: 37B                                                                                         0.0s
+ => [internal] load .dockerignore                                                                                           0.0s
+ => => transferring context: 34B                                                                                            0.0s
+ => [internal] load metadata for docker.io/library/node:latest                                                              0.0s
+ => [1/5] FROM docker.io/library/node:latest                                                                                0.0s
+ => [internal] load build context                                                                                           0.0s
+ => => transferring context: 615B                                                                                           0.0s
+ => CACHED [2/5] RUN mkdir -p /src/app                                                                                      0.0s
+ => CACHED [3/5] WORKDIR /src/app                                                                                           0.0s
+ => CACHED [4/5] COPY . /src/app                                                                                            0.0s
+ => CACHED [5/5] RUN yarn install                                                                                           0.0s
+ => exporting to image                                                                                                      0.0s
+ => => exporting layers                                                                                                     0.0s
+ => => writing image sha256:a8e96c3d152a1833d15b2cc514887c7b89531e73ccd3a45f2713b0f922c839e6                                0.0s
+ => => naming to docker.io/library/docker-try-again_server                                                                  0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+Building fend
+[+] Building 64.7s (10/10) FINISHED
+ => [internal] load build definition from Dockerfile                                                                        0.0s
+ => => transferring dockerfile: 37B                                                                                         0.0s
+ => [internal] load .dockerignore                                                                                           0.0s
+ => => transferring context: 34B                                                                                            0.0s
+ => [internal] load metadata for docker.io/library/node:latest                                                              0.0s
+ => [1/5] FROM docker.io/library/node:latest                                                                                0.0s
+ => [internal] load build context                                                                                           0.0s
+ => => transferring context: 446B                                                                                           0.0s
+ => CACHED [2/5] RUN mkdir -p /src/app                                                                                      0.0s
+ => CACHED [3/5] WORKDIR /src/app                                                                                           0.0s
+ => [4/5] COPY . /src/app                                                                                                   0.0s
+ => [5/5] RUN yarn install                                                                                                 55.3s
+ => exporting to image                                                                                                      9.0s
+ => => exporting layers                                                                                                     9.0s
+ => => writing image sha256:1867765e6fe968b835803328034a2e78c44ecdade7d6382227c74f991bbd94b4                                0.0s
+ => => naming to docker.io/library/docker-try-again_fend                                                                    0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+Creating docker-try-again_db_1 ... done
+Creating docker-try-again_server_1 ... done
+Creating docker-try-again_fend_1   ... done
+Attaching to docker-try-again_db_1, docker-try-again_server_1, docker-try-again_fend_1
+db_1      |
+db_1      | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db_1      |
+db_1      | 2021-07-14 19:44:19.995 UTC [1] LOG:  starting PostgreSQL 13.3 (Debian 13.3-1.pgdg100+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
+db_1      | 2021-07-14 19:44:19.996 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db_1      | 2021-07-14 19:44:19.996 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db_1      | 2021-07-14 19:44:20.000 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db_1      | 2021-07-14 19:44:20.006 UTC [13] LOG:  database system was shut down at 2021-07-14 19:42:37 UTC
+db_1      | 2021-07-14 19:44:20.018 UTC [1] LOG:  database system is ready to accept connections
+server_1  |
+server_1  | > server@0.0.0 start
+server_1  | > npm run start-knex && nodemon ./bin/www
+server_1  |
+server_1  |
+server_1  | > server@0.0.0 start-knex
+server_1  | > npx knex migrate:latest && npx knex seed:run
+server_1  |
+server_1  | Using environment: development
+server_1  | Already up to date
+server_1  | Using environment: development
+server_1  | Ran 1 seed files
+server_1  | npm notice
+server_1  | npm notice New minor version of npm available! 7.18.1 -> 7.19.1
+server_1  | npm notice Changelog: <https://github.com/npm/cli/releases/tag/v7.19.1>
+server_1  | npm notice Run `npm install -g npm@7.19.1` to update!
+server_1  | npm notice
+server_1  | [nodemon] 2.0.12
+server_1  | [nodemon] to restart at any time, enter `rs`
+server_1  | [nodemon] watching path(s): *.*
+server_1  | [nodemon] watching extensions: js,mjs,json
+server_1  | [nodemon] starting `node ./bin/www`
+fend_1    |
+fend_1    | > fend@0.1.0 start
+fend_1    | > react-scripts start
+fend_1    |
+fend_1    | ℹ ｢wds｣: Project is running at http://172.31.0.4/
+fend_1    | ℹ ｢wds｣: webpack output is served from
+fend_1    | ℹ ｢wds｣: Content not from webpack is served from /src/app/public
+fend_1    | ℹ ｢wds｣: 404s will fallback to /
+fend_1    | Starting the development server...
+fend_1    |
+fend_1    | Compiled with warnings.
+fend_1    |
+fend_1    | src/App.js
+fend_1    |   Line 33:6:  React Hook useEffect has a missing dependency: 'postInputs'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+fend_1    |
+fend_1    | Search for the keywords to learn more about each warning.
+fend_1    | To ignore, add // eslint-disable-next-line to the line before.
+fend_1    |
+server_1  | OPTIONS / 204 1.551 ms - 0
+server_1  | POST body:  {}
+db_1      | 2021-07-14 19:44:58.081 UTC [52] ERROR:  null value in column "title" of relation "inputs" violates not-null constraint
+db_1      | 2021-07-14 19:44:58.081 UTC [52] DETAIL:  Failing row contains (17, null, 2021-07-14 19:44:58.076088+00).
+db_1      | 2021-07-14 19:44:58.081 UTC [52] STATEMENT:  insert into "inputs" ("title") values (DEFAULT)
+server_1  | POST / 404 169.063 ms - 81
+server_1  | GET submitted
+server_1  | GET / 200 32.362 ms - 71
+server_1  | GET submitted
+server_1  | GET / 200 17.189 ms - 71
+server_1  | OPTIONS / 204 1.641 ms - 0
+server_1  | POST body:  {}
+db_1      | 2021-07-14 19:45:18.620 UTC [52] ERROR:  null value in column "title" of relation "inputs" violates not-null constraint
+db_1      | 2021-07-14 19:45:18.620 UTC [52] DETAIL:  Failing row contains (18, null, 2021-07-14 19:45:18.616549+00).
+db_1      | 2021-07-14 19:45:18.620 UTC [52] STATEMENT:  insert into "inputs" ("title") values (DEFAULT)
+server_1  | POST / 404 28.722 ms - 81
+server_1  | OPTIONS / 204 1.417 ms - 0
+server_1  | POST body:  {}
+db_1      | 2021-07-14 19:52:44.521 UTC [52] ERROR:  null value in column "title" of relation "inputs" violates not-null constraint
+db_1      | 2021-07-14 19:52:44.521 UTC [52] DETAIL:  Failing row contains (19, null, 2021-07-14 19:52:44.513472+00).
+db_1      | 2021-07-14 19:52:44.521 UTC [52] STATEMENT:  insert into "inputs" ("title") values (DEFAULT)
+server_1  | POST / 404 23.832 ms - 81
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping docker-try-again_fend_1   ... done
+Stopping docker-try-again_server_1 ... done
+Stopping docker-try-again_db_1     ... done
+
+~/s/11/docker-try-again >>>>                                                                 

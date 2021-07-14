@@ -1,0 +1,233 @@
+Last login: Mon Jul 12 17:21:31 on ttys018 
+    ~  cd supra-coders/11-docker                                                                                 ✔  
+ 
+    ~/supra-coders/11-docker  ls                                                                                 ✔  
+Icon?                   Please-Contain-Yourself apidemolab              docker-try-again        docker-try-again copy   galv-compose-example 
+ 
+    ~/supra-coders/11-docker  cd docker-try-again                                                                                                       ✔  
+ 
+    ~/supra-coders/11-docker/docker-try-again    main !1  ls                                                                                 ✔  
+README.md           docker-compose.yaml frontend            server 
+ 
+    ~/supra-coders/11-docker/docker-try-again    main !1  docker images                                                                                                                                   ✔  
+REPOSITORY                TAG       IMAGE ID       CREATED          SIZE 
+docker-try-again_fend     latest    edd34a682d73   8 minutes ago    1.17GB 
+<none>                    <none>    18f74e1130d0   47 minutes ago   1.17GB 
+docker-try-again_server   latest    a8e96c3d152a   48 minutes ago   872MB 
+<none>                    <none>    1d596bd3eb91   22 hours ago     1.33GB 
+<none>                    <none>    6ca58e09ea09   22 hours ago     879MB 
+server                    latest    1b19dbc8c331   24 hours ago     879MB 
+client                    latest    800e8fb7732e   24 hours ago     1.33GB 
+node                      latest    4cdb0183ddc7   6 days ago       853MB 
+postgres                  latest    f24ddd78d62d   3 weeks ago      300MB 
+alpine/git                latest    22c155daebb5   2 months ago     25.2MB 
+keinos/sqlite3            latest    26fe9fa487ca   5 months ago     14.7MB 
+ 
+    ~/supra-coders/11-docker/docker-try-again    main !1  docker images -a                                                                                 ✔  
+REPOSITORY                TAG       IMAGE ID       CREATED          SIZE 
+docker-try-again_fend     latest    edd34a682d73   8 minutes ago    1.17GB 
+<none>                    <none>    18f74e1130d0   47 minutes ago   1.17GB 
+docker-try-again_server   latest    a8e96c3d152a   48 minutes ago   872MB 
+<none>                    <none>    1d596bd3eb91   22 hours ago     1.33GB 
+<none>                    <none>    6ca58e09ea09   22 hours ago     879MB 
+server                    latest    1b19dbc8c331   24 hours ago     879MB 
+client                    latest    800e8fb7732e   24 hours ago     1.33GB 
+node                      latest    4cdb0183ddc7   6 days ago       853MB 
+postgres                  latest    f24ddd78d62d   3 weeks ago      300MB 
+alpine/git                latest    22c155daebb5   2 months ago     25.2MB 
+keinos/sqlite3            latest    26fe9fa487ca   5 months ago     14.7MB 
+ 
+    ~/s/11/docker-try-again    main !1  docker push akpinkerton/docker-try-again_fend:latest                          ✔  
+The push refers to repository [docker.io/akpinkerton/docker-try-again_fend] 
+An image does not exist locally with the tag: akpinkerton/docker-try-again_fend 
+ 
+    ~/s/11-docker/docker-try-again    main !1  docker push akpinkerton/docker-try-again_fend:latest                 1 ✘  
+The push refers to repository [docker.io/akpinkerton/docker-try-again_fend] 
+An image does not exist locally with the tag: akpinkerton/docker-try-again_fend 
+ 
+    ~/s/11-docker/docker-try-again    main !1  docker login                                                         1 ✘  
+Authenticating with existing credentials... 
+Login Succeeded 
+ 
+    ~/s/11-docker/docker-try-again    main !1  docker image ls                                                        ✔  
+REPOSITORY                TAG       IMAGE ID       CREATED             SIZE 
+docker-try-again_fend     latest    edd34a682d73   23 minutes ago      1.17GB 
+<none>                    <none>    18f74e1130d0   About an hour ago   1.17GB 
+docker-try-again_server   latest    a8e96c3d152a   About an hour ago   872MB 
+<none>                    <none>    1d596bd3eb91   22 hours ago        1.33GB 
+<none>                    <none>    6ca58e09ea09   22 hours ago        879MB 
+server                    latest    1b19dbc8c331   24 hours ago        879MB 
+client                    latest    800e8fb7732e   24 hours ago        1.33GB 
+node                      latest    4cdb0183ddc7   6 days ago          853MB 
+postgres                  latest    f24ddd78d62d   3 weeks ago         300MB 
+alpine/git                latest    22c155daebb5   2 months ago        25.2MB 
+keinos/sqlite3            latest    26fe9fa487ca   5 months ago        14.7MB 
+ 
+    ~/s/11-docker/docker-try-again    main !1  docker build -t akpinkerton/docker-try-again_fend:latest .             ✔  
+[+] Building 0.1s (1/2)                                                                                                          
+ => [internal] load build definition from Dockerfile                                                                        0.1s 
+ => => transferring dockerfile: 2B                                                                                          0.0s 
+failed to solve with frontend dockerfile.v0: failed to read dockerfile: open /var/lib/docker/tmp/buildkit-mount302331630/Dockerfile: no such file or directory 
+ 
+    ~/s/11-docker/docker-try-again    main !1  docker build -t akpinkerton/docker-try-again_fend:latest ./frontend  1 ✘  
+[+] Building 0.4s (10/10) FINISHED                                                                                               
+ => [internal] load build definition from Dockerfile                                                                        0.1s 
+ => => transferring dockerfile: 579B                                                                                        0.0s 
+ => [internal] load .dockerignore                                                                                           0.0s 
+ => => transferring context: 52B                                                                                            0.0s 
+ => [internal] load metadata for docker.io/library/node:latest                                                              0.0s 
+ => [1/5] FROM docker.io/library/node:latest                                                                                0.0s 
+ => [internal] load build context                                                                                           0.1s 
+ => => transferring context: 691.02kB                                                                                       0.1s 
+ => CACHED [2/5] RUN mkdir -p /src/app                                                                                      0.0s 
+ => CACHED [3/5] WORKDIR /src/app                                                                                           0.0s 
+ => CACHED [4/5] COPY . /src/app                                                                                            0.0s 
+ => CACHED [5/5] RUN yarn install                                                                                           0.0s 
+ => exporting to image                                                                                                      0.0s 
+ => => exporting layers                                                                                                     0.0s 
+ => => writing image sha256:edd34a682d73dbf0071bb1c6e4ba43442f06b1812fb32c886453bfcc885d4aa1                                0.0s 
+ => => naming to docker.io/akpinkerton/docker-try-again_fend:latest                                                         0.0s 
+ 
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them 
+ 
+    ~/s/11-docker/docker-try-again    main !1  docker image ls                                                        ✔  
+REPOSITORY                          TAG       IMAGE ID       CREATED             SIZE 
+akpinkerton/docker-try-again_fend   latest    edd34a682d73   29 minutes ago      1.17GB 
+docker-try-again_fend               latest    edd34a682d73   29 minutes ago      1.17GB 
+<none>                              <none>    18f74e1130d0   About an hour ago   1.17GB 
+docker-try-again_server             latest    a8e96c3d152a   About an hour ago   872MB 
+<none>                              <none>    1d596bd3eb91   22 hours ago        1.33GB 
+<none>                              <none>    6ca58e09ea09   22 hours ago        879MB 
+server                              latest    1b19dbc8c331   24 hours ago        879MB 
+client                              latest    800e8fb7732e   24 hours ago        1.33GB 
+node                                latest    4cdb0183ddc7   6 days ago          853MB 
+postgres                            latest    f24ddd78d62d   3 weeks ago         300MB 
+alpine/git                          latest    22c155daebb5   2 months ago        25.2MB 
+keinos/sqlite3                      latest    26fe9fa487ca   5 months ago        14.7MB 
+ 
+    ~/s/11-docker/docker-try-again    main !1  docker push akpinkerton/docker-try-again_fend:latest                   ✔  
+The push refers to repository [docker.io/akpinkerton/docker-try-again_fend] 
+b0f6c5d4c6c1: Pushed  
+faf90546487a: Pushed  
+5f70bf18a086: Mounted from akpinkerton/apidemo  
+36a45530d968: Mounted from akpinkerton/apidemo  
+a43a6a79193c: Mounted from akpinkerton/apidemo  
+ff324a4e7cc5: Mounted from akpinkerton/apidemo  
+159644e5d9b8: Mounted from akpinkerton/apidemo  
+141c7bf4e2f5: Mounted from akpinkerton/apidemo  
+e4659d43a846: Mounted from akpinkerton/apidemo  
+fc5629ad1c38: Mounted from akpinkerton/apidemo  
+f4a24bac52c1: Mounted from akpinkerton/apidemo  
+cb3aa7fa131f: Mounted from akpinkerton/apidemo  
+bee1275ae7ac: Mounted from akpinkerton/apidemo  
+latest: digest: sha256:88cede61484250a57f12751cf882c8ece7e7a5e593c2c14934d836dc4ff2ffbc size: 3049 
+ 
+    ~/s/11/docker-try-again    main !1  docker build -t akpinkerton/docker-try-again_server:latest ./server 
+[+] Building 0.3s (10/10) FINISHED                                                                                               
+ => [internal] load build definition from Dockerfile                                                                        0.0s 
+ => => transferring dockerfile: 606B                                                                                        0.0s 
+ => [internal] load .dockerignore                                                                                           0.0s 
+ => => transferring context: 52B                                                                                            0.0s 
+ => [internal] load metadata for docker.io/library/node:latest                                                              0.0s 
+ => [internal] load build context                                                                                           0.0s 
+ => => transferring context: 72.66kB                                                                                        0.0s 
+ => [1/5] FROM docker.io/library/node:latest                                                                                0.0s 
+ => CACHED [2/5] RUN mkdir -p /src/app                                                                                      0.0s 
+ => CACHED [3/5] WORKDIR /src/app                                                                                           0.0s 
+ => CACHED [4/5] COPY . /src/app                                                                                            0.0s 
+ => CACHED [5/5] RUN yarn install                                                                                           0.0s 
+ => exporting to image                                                                                                      0.0s 
+ => => exporting layers                                                                                                     0.0s 
+ => => writing image sha256:a8e96c3d152a1833d15b2cc514887c7b89531e73ccd3a45f2713b0f922c839e6                                0.0s 
+ => => naming to docker.io/akpinkerton/docker-try-again_server:latest                                                       0.0s 
+ 
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them 
+ 
+    ~/s/11-docker/docker-try-again    main !1  docker image ls                                                        ✔  
+REPOSITORY                            TAG       IMAGE ID       CREATED             SIZE 
+akpinkerton/docker-try-again_fend     latest    edd34a682d73   34 minutes ago      1.17GB 
+docker-try-again_fend                 latest    edd34a682d73   34 minutes ago      1.17GB 
+<none>                                <none>    18f74e1130d0   About an hour ago   1.17GB 
+akpinkerton/docker-try-again_server   latest    a8e96c3d152a   About an hour ago   872MB 
+docker-try-again_server               latest    a8e96c3d152a   About an hour ago   872MB 
+<none>                                <none>    1d596bd3eb91   22 hours ago        1.33GB 
+<none>                                <none>    6ca58e09ea09   22 hours ago        879MB 
+server                                latest    1b19dbc8c331   24 hours ago        879MB 
+client                                latest    800e8fb7732e   24 hours ago        1.33GB 
+node                                  latest    4cdb0183ddc7   7 days ago          853MB 
+postgres                              latest    f24ddd78d62d   3 weeks ago         300MB 
+alpine/git                            latest    22c155daebb5   2 months ago        25.2MB 
+keinos/sqlite3                        latest    26fe9fa487ca   5 months ago        14.7MB 
+ 
+    ~/s/11-docker/docker-try-again    main !1  docker push akpinkerton/docker-try-again_server:latest                 ✔  
+The push refers to repository [docker.io/akpinkerton/docker-try-again_server] 
+ad03d5685846: Pushed  
+b191288f5461: Pushed  
+5f70bf18a086: Mounted from akpinkerton/docker-try-again_fend  
+36a45530d968: Mounted from akpinkerton/docker-try-again_fend  
+a43a6a79193c: Mounted from akpinkerton/docker-try-again_fend  
+ff324a4e7cc5: Mounted from akpinkerton/docker-try-again_fend  
+159644e5d9b8: Mounted from akpinkerton/docker-try-again_fend  
+141c7bf4e2f5: Mounted from akpinkerton/docker-try-again_fend  
+e4659d43a846: Mounted from akpinkerton/docker-try-again_fend  
+fc5629ad1c38: Mounted from akpinkerton/docker-try-again_fend  
+f4a24bac52c1: Mounted from akpinkerton/docker-try-again_fend  
+cb3aa7fa131f: Mounted from akpinkerton/docker-try-again_fend  
+bee1275ae7ac: Mounted from akpinkerton/docker-try-again_fend  
+latest: digest: sha256:129249d6956153e1dfaf208e30c8572850a2e1869a6a1f34767dd7125d63f1dc size: 3047 
+ 
+    ~/s/11/docker-try-again    main !1  docker image ls                                                       ✔  24s   
+REPOSITORY                            TAG       IMAGE ID       CREATED              SIZE 
+docker-try-again_fend                 latest    1867765e6fe9   About a minute ago   1.17GB 
+akpinkerton/docker-try-again_fend     latest    edd34a682d73   41 minutes ago       1.17GB 
+<none>                                <none>    18f74e1130d0   About an hour ago    1.17GB 
+akpinkerton/docker-try-again_server   latest    a8e96c3d152a   About an hour ago    872MB 
+docker-try-again_server               latest    a8e96c3d152a   About an hour ago    872MB 
+<none>                                <none>    1d596bd3eb91   22 hours ago         1.33GB 
+<none>                                <none>    6ca58e09ea09   22 hours ago         879MB 
+server                                latest    1b19dbc8c331   24 hours ago         879MB 
+client                                latest    800e8fb7732e   24 hours ago         1.33GB 
+node                                  latest    4cdb0183ddc7   7 days ago           853MB 
+postgres                              latest    f24ddd78d62d   3 weeks ago          300MB 
+alpine/git                            latest    22c155daebb5   2 months ago         25.2MB 
+keinos/sqlite3                        latest    26fe9fa487ca   5 months ago         14.7MB 
+ 
+    ~/s/11-docker/docker-try-again    main !2  docker build -t akpinkerton/docker-try-again_fend:latest ./frontend    ✔  
+[+] Building 0.4s (10/10) FINISHED                                                                                               
+ => [internal] load build definition from Dockerfile                                                                        0.0s 
+ => => transferring dockerfile: 37B                                                                                         0.0s 
+ => [internal] load .dockerignore                                                                                           0.0s 
+ => => transferring context: 34B                                                                                            0.0s 
+ => [internal] load metadata for docker.io/library/node:latest                                                              0.0s 
+ => [1/5] FROM docker.io/library/node:latest                                                                                0.0s 
+ => [internal] load build context                                                                                           0.0s 
+ => => transferring context: 446B                                                                                           0.0s 
+ => CACHED [2/5] RUN mkdir -p /src/app                                                                                      0.0s 
+ => CACHED [3/5] WORKDIR /src/app                                                                                           0.0s 
+ => CACHED [4/5] COPY . /src/app                                                                                            0.0s 
+ => CACHED [5/5] RUN yarn install                                                                                           0.0s 
+ => exporting to image                                                                                                      0.0s 
+ => => exporting layers                                                                                                     0.0s 
+ => => writing image sha256:1867765e6fe968b835803328034a2e78c44ecdade7d6382227c74f991bbd94b4                                0.0s 
+ => => naming to docker.io/akpinkerton/docker-try-again_fend:latest                                                         0.0s 
+ 
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them 
+ 
+    ~/s/11-docker/docker-try-again    main !2  docker push akpinkerton/docker-try-again_fend:latest                   ✔  
+The push refers to repository [docker.io/akpinkerton/docker-try-again_fend] 
+bc4179c79524: Pushed  
+bbd2d3cfc07d: Pushed  
+5f70bf18a086: Layer already exists  
+36a45530d968: Layer already exists  
+a43a6a79193c: Layer already exists  
+ff324a4e7cc5: Layer already exists  
+159644e5d9b8: Layer already exists  
+141c7bf4e2f5: Layer already exists  
+e4659d43a846: Layer already exists  
+fc5629ad1c38: Layer already exists  
+f4a24bac52c1: Layer already exists  
+cb3aa7fa131f: Layer already exists  
+bee1275ae7ac: Layer already exists  
+latest: digest: sha256:093c65b04e3f822c78d5692825fe6cae9537b0b8047c62d964ce8a4bf572114e size: 3049 
+ 
+    ~/s/11/docker-try-again    main !2                                                                     ✔  2m 44s   

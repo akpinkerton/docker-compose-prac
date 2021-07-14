@@ -12,10 +12,10 @@ Using Docker-Compose, connect a dockerized PostgreSQL database with your React f
 - [X] Input box
 - [X] Create express server
 - [X] Single post
-- [ ] Docker compose to create postgres
+- [X] Docker compose to create postgres
 - [X] create input db
 - [X] Connect db to fend
 - [ ] *get situation to display input on page
-- [ ] send to dockerhub
+- [X] send to dockerhub
 - [ ] edit image
-- [ ] push changes to dockerhub# docker-compose-prac
+- [ ] push changes to dockerhub
