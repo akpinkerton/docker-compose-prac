@@ -23,9 +23,8 @@ router.post('/', function (req, res) {
     .insert({title: req.body.title})
     .then(inputs => res.status(200).json(inputs))
     .catch(err =>
-      res.status(404).json({
-        message:
-          'The droids you are looking for could not be found. Please try again'
+      res.status(500).json({
+        message: err
       })
     );
 })

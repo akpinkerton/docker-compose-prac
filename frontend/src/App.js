@@ -27,7 +27,7 @@ function App() {
   }
 
   useEffect(() => {
-    if (data.title !== '') {
+    if (data.title !== undefined) {
       postInputs()
     }
   }, [data])
