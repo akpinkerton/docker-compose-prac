@@ -2,8 +2,7 @@
 version: "3.1"
 services:
   fend:
-    build: fend/
-    container_name: fend
+    build: frontend
     # volumes:
     #   - "./fend:/app"
     ports:
@@ -15,7 +14,6 @@ services:
 
   server:
     build: server/
-    container_name: server
     # volumes:
     #   - "./server:/app"
     ports:
@@ -30,7 +28,6 @@ services:
 
   db:
     image: postgres:latest
-    container_name: db
     ports:
       - "5432:5432"
     user: postgres
